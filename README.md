@@ -35,6 +35,18 @@ process.env.TENDERLY_PROJECT!,
 process.env.TENDERLY_ACCESS_KEY!,
 ```
 
+### Metarouter CLI Route generation
+
+Metarouter router generation example (to AERO token on Base blockchain):
+
+`./bin/cli generate --tokenOut 0x940181a94a35a4569e4529a3cdfb74e38fd98631 --chainId 8453`
+
+This will create routes from all pre-defined tokens to `tokenOut` parameter and will add them to `config_generated.yaml`. Pre-defined tokens and amount quoted right now is hardcoded in `generate.ts` file, but ideally should be taken from chaindata.
+
+You can provide `tokenIn` and `amount` parameters to override pre-defined tokens and amounts to the one you want.
+
+To generate those in batch, `batch_generate.sh` script can be used
+
 ### CLI
 
 The package can be run as a CLI for testing purposes.
@@ -161,7 +173,6 @@ Total ticks crossed: 7
 ```
 ./bin/cli quote --tokenIn 0x7F5c764cBc14f9669B88837ca1490cCa17c31607 --tokenOut 0x4200000000000000000000000000000000000042 --amount 1 --exactIn --minSplits 1 --protocols v2 --router alpha --chainId 10
 ```
-
 
 ## Optimism-Goerli
 
