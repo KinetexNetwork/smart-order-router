@@ -58,7 +58,8 @@
     "lodash": "^4.17.21",
     "mnemonist": "^0.38.3",
     "node-cache": "^5.1.2",
-    "stats-lite": "^2.2.0"
+    "stats-lite": "^2.2.0",
+    "yaml": "^2.7.0"
   },
   "devDependencies": {
     "@ethersproject/providers": "^5.4.0",
